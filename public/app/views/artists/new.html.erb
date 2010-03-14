@@ -1,0 +1,19 @@
+<h1>Add a New Artist</h1>
+
+<% form_for @artist do |f| %>
+  <%#= f.error_messages %>
+
+	<p>
+		<%= f.label :name %>
+		<%= f.text_field	:name %>
+    <%#= f.integer :artist_id %>
+  </p>
+
+	<p>
+    <%= f.submit "Create" %>
+	</p>
+<% end %>
+
+<%#= link_to 'Back', artists_path %>
+<%= link_to "new artist", new_artist_path %>
+<%= link_to "all", artists_path %>

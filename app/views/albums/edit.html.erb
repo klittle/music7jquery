@@ -1,0 +1,13 @@
+<% form_for @album, :html => {:multipart => true} do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  
+  
+  <%= f.submit "Save" %>
+<% end %>
+
+
+<p><%= link_to 'Artists', artists_path %></p>
+<p><%= link_to 'Albums', albums_path %></p>

@@ -1,0 +1,29 @@
+<p><%= "Album Listing" %></p>
+<p><%= "This is the Show View" %></p>
+
+<%= will_paginate @albums %>
+	
+
+	
+		<% form_for :Album, :html => {:method => :get} do |form| %>
+		
+
+		
+
+
+	<% end %>
+	
+
+
+
+<p>
+  <%#= image_tag @album.photo.url %>
+  <%#= image_tag @album.photo.url(:medium) %>
+  <%#= image_tag @album.photo.url(:thumb) %>
+</p>
+
+<p><%#= link_to 'Edit', edit_albums_path(@album) %></p>
+<p><%= link_to 'Artists', artists_path %></p>
+<p><%= link_to 'Albums', albums_path %></p>
+<p><%#= link_to 'Destroy', album, :confirm => 'Are you sure?', :method => :delete %></p>
+

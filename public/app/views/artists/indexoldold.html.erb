@@ -1,0 +1,17 @@
+
+<p><%= "Artist Listing" %></p>
+
+
+<% @artists.each do |artist| %>
+
+  <p><%= link_to artist.name, artist %></p>
+# is artist.name correct?
+<% end %>
+
+<tr>
+  <td><%= link_to 'Show', artist %></td>
+
+</tr>
+
+<%= link_to "New artist", new_artist_path %>
+  

@@ -1,0 +1,25 @@
+<p><%= "Artist Listing" %></p>
+<p><%= "This is the Index View" %></p>
+
+<%= will_paginate @artists %>
+
+
+<% @artists.each do |artist| %>
+  <div class="item">
+  <h3>
+	<%= link_to artist.name, artist %></p> |
+	</h3>
+	<div class="actions">
+	  <%= link_to "Edit", edit_artist_path(artist) %> |
+		<%= link_to 'Destroy', @artist, :confirm => 'Are you sure?', :method => :delete %>
+	</div>
+ </div>
+<% end %>
+	
+<%= will_paginate @artists %>
+
+<p><%= link_to "New artist", new_artist_path %></p>
+<p><%= link_to 'Back', artists_path %></p>
+<p><%= link_to 'Albums', albums_path %></p>
+
+

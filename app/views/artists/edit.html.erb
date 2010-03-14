@@ -1,0 +1,19 @@
+<h1>Editing artist</h1>
+
+<% form_for @artist, :html => {:multipart => true} do |f| %>
+	<p>
+		<%= f.label :name %>
+    <%= f.text_field :name %>
+	</p>
+		
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+
+<p><%= link_to "all", artists_path %></p>
+<p><%= link_to 'Albums', albums_path %></p>
+<p><%= link_to 'Destroy', @artist, :confirm => 'Are you sure?', :method => :delete %></p>

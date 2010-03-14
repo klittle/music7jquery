@@ -1,0 +1,16 @@
+<h1>New artist</h1>
+
+<% form_for @artist do |f| %>
+  <%= error_messages_for :artists %>
+	<p>
+		<%= f.label :name %>
+		<%= f.text_field	:name %>
+	<p>
+    <%= f.submit "Create" %>
+	</p>
+<% end %>
+
+<%#= link_to 'Back', artists_path %>
+<p><%= link_to "new artist", new_artist_path %></p>
+<p><%= link_to 'Back', artists_path %></p>
+<p><%= link_to 'Albums', albums_path %></p>

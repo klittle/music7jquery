@@ -1,0 +1,33 @@
+
+<p><%= "Show View" %></p>
+
+<h2>Albums by: <%=h @artist.name %></h2>
+  
+	<div>
+		
+<label for="choices"><h2>Pick a Way to Sort Albums by: <%=h @artist.name %></h2>
+
+	<div id="sort_form">
+		<% remote_form_tag artist_path(@artist), :method => :get do%>
+	  <%= select_tag (:sort, options_for_select(%w{name date}, 		params[:sort]))%>
+	<p><%= submit_tag 'Submit' %></p>
+	<% end %>
+</div>
+	
+
+
+    <%= render :partial => "showalbumsort", :collection => @albums %>
+
+
+ </p>
+
+
+
+ 
+</div>
+
+<p><%#= link_to 'Edit', edit_artist(@artist) %></p>
+<p><%= link_to 'Back', artists_path %></p>
+<p><%= link_to 'Albums', albums_path %></p>
+<p><%#= link_to 'Edit', @artist, :method => :edit %></p>
+<p><%= link_to 'Destroy', @artist, :confirm => 'Are you sure?', :method => :delete %></p>

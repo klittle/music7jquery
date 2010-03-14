@@ -1,0 +1,21 @@
+<p><%= "Artist Listing" %></p>
+<p><%= "This is the Index View" %></p>
+<p><%= "Click on Artist to Edit or Delete" %></p>
+
+<% @artists.each do |artist| %>
+
+	<p><%= link_to artist.name, artist_path(artist) %></p>
+
+
+	<% end %>
+	
+
+
+
+
+
+<p><%= link_to 'New artist', :action => "new" %></p>
+<p><%= link_to 'See All Albums', albums_path%></p>
+<%#= link_to 'Delete', artist_path(@artist),:method => :delete, :confirm => "Are you sure?" %> 
+
+

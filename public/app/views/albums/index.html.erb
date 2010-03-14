@@ -1,0 +1,12 @@
+
+<%= "ALL ALBUMS" %>
+<p><%= "This is album Index view"%></p>
+<p><%= "Click on an album to edit or delete"%></p>
+
+<% @albums.each do |album| %>
+  <p><%= link_to album.name, album %></p>
+<% end %>
+
+
+<p><%= link_to "New Album", new_album_path %></p>
+<p><%= link_to 'See All Artists', artists_path%></p>

@@ -1,0 +1,16 @@
+<p><%= "Album Listing" %></p>
+<p><%= "This is the Show View" %></p>
+
+<h1><%= @album.name %></h1>
+<p><%= link_to "edit", edit_album_path(@album) %></p>
+<p><%= link_to('delete', {:action => 'destroy', :id => @album},
+								:method => 'delete', :confirm => 'Really?') %></p>
+
+<p>
+  <%#= image_tag @album.photo.url %>
+  <%#= image_tag @album.photo.url(:medium) %>
+  <%#= image_tag @album.photo.url(:thumb) %>
+</p>
+
+<%= link_to "all", albums_path %>
+

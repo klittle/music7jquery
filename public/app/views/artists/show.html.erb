@@ -1,0 +1,24 @@
+<p><%= "Artist Listing" %></p>
+<p><%= "This is the Show View" %></p>
+
+<% form_for @artist, :html => {:multipart => true} do |f| %>
+	<p>
+		<%= f.label :name %>
+    <%= f.text_field :name %>
+	</p>
+
+		  <%= f.error_messages %>
+		
+
+		  <p>
+		    <%= f.submit 'Save' %>
+		  </p>
+		<% end %>
+	
+<%= link_to 'Edit', edit_artist_path(@artist) %> |
+<%= link_to 'Back', artists_path %>
+<p><%= link_to('delete', {:action => 'destroy', :id => @artist},
+								:method => 'delete', :confirm => 'Are you decided?') %></p>
+<p><%= link_to 'See All Albums', albums_path%></p>
+<p><%= link_to 'See All Artists', artists_path%></p>
+

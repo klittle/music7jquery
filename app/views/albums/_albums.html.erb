@@ -1,0 +1,17 @@
+<%= will_paginate @albums %>
+
+<% @albums.each do |album| %>
+  <div class="item">
+  <h3>
+  <p><%= link_to album.name, album %></p>
+  </h3>
+ 	<div class="actions">
+ 	  <%= link_to "Edit", edit_album_path(album) %> |
+ 		<%= link_to 'Destroy', @album, :confirm => 'Are you sure?', :method => :delete %>
+ 	</div>
+  </div>
+<% end %>
+<%= will_paginate @albums %>
+
+<p><%= link_to "new album", new_album_path %></p>
+<p><%= link_to 'Artists', artists_path %></p>
